@@ -20,21 +20,28 @@
 
 This project is used to build the UI of the CTI Website
 
+=== Preamble
+
+To support multiple languages, we build a ui for each langage to handle some contents that are not relying on Asccidoc sources.
+
+See https://github.com/LabVIEWCommunityTraining/cti-documentation/issues/7[this issue] for more details
+
 === Prerequisites
 
-To preview and bundle the default UI, you need the following software on your computer:
+To preview and bundle the UI, you need the following software on your computer:
 
 * {url-git}[git] (command: `git`)
 * {url-nodejs}[Node.js] (commands: `node` and `npm`)
 * {url-gulp}[Gulp CLI] (command: `gulp`)
+
 === Preview the UI
 
-The default UI project is configured to preview offline.
+The UI project is configured to preview offline.
 The files in the [.path]_preview-src/_ folder provide the sample content that allows you to see the UI in action.
 In this folder, you'll primarily find pages written in AsciiDoc.
 These pages provide a representative sample and kitchen sink of content from the real site.
 
-To build the UI and preview it in a local web server, run the `preview` command:
+To build the UI and preview it in a local web server, run the `preview` command in the desired language folder:
 
  $ gulp preview
 
