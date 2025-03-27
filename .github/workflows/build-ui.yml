@@ -18,7 +18,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
     - name: Install Gulp locally to build the UI
-      run: npm i gulp-cli ./user-interface
+      run: npm i gulp-cli ./en
     - name: Build UI
       run: gulp bundle -f ./en/gulpfile.js
     - name: 'Upload Artifact'
