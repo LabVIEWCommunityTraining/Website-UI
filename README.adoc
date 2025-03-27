@@ -18,8 +18,6 @@
 :url-source-maps: https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Use_a_source_map
 :img-ci-status: {url-project}/badges/main/pipeline.svg
 
-image:{img-ci-status}[CI Status (GitLab CI), link={url-ci-pipelines}]
-
 This project is used to build the UI of the CTI Website
 
 === Prerequisites
