@@ -33,3 +33,4 @@ jobs:
       with:
         name: ui-bundles
         path: "**/*.zip"
+        exclude: "**/archive.zip"
