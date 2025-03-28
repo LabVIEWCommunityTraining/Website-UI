@@ -14,6 +14,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -28,7 +31,7 @@ jobs:
     - name: Build fr UI
       run: gulp bundle -f ./fr/gulpfile.js
 # download UIs
-    - name: 'Upload Artifact'
+    - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: ui-bundles
