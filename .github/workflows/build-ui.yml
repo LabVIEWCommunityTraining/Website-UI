@@ -37,6 +37,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: github-pages
+        include-hidden-files: true
         path: |
           ??/build/*.zip
           index.html
