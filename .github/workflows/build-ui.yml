@@ -40,7 +40,6 @@ jobs:
         include-hidden-files: true
         path: |
           ??/build/*.zip
-          index.html
           .nojekyll
     - name: Deploy to GitHub Pages
       id: deployment
