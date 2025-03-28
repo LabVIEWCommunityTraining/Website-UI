@@ -21,25 +21,25 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 # build en website
-    - name: Install Gulp locally to build the UI
-      run: npm i gulp-cli ./en
-    - name: Build en UI
-      run: gulp bundle -f ./en/gulpfile.js
-# build fr website
-    - name: Install Gulp locally to build the UI
-      run: npm i gulp-cli ./fr
-    - name: Build fr UI
-      run: gulp bundle -f ./fr/gulpfile.js
-# download UIs
-    - name: nojekill
-      run: touch ./.nojekyll
+#     - name: Install Gulp locally to build the UI
+#       run: npm i gulp-cli ./en
+#     - name: Build en UI
+#       run: gulp bundle -f ./en/gulpfile.js
+# # build fr website
+#     - name: Install Gulp locally to build the UI
+#       run: npm i gulp-cli ./fr
+#     - name: Build fr UI
+#       run: gulp bundle -f ./fr/gulpfile.js
+# # download UIs
+#     - name: nojekill
+#       run: touch ./.nojekyll
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: github-pages
         include-hidden-files: true
         path: |
-          ??/build/*.zip
+          index.html
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
