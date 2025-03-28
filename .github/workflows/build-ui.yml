@@ -36,7 +36,7 @@ jobs:
       with:
         name: github-pages
         path: |
-          ??/build/*.vip
+          ??/build/*.zip
           index.html
     - name: Deploy to GitHub Pages
       id: deployment
