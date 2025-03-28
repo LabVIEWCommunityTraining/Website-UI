@@ -34,3 +34,6 @@ jobs:
         name: ui-bundles
         path: "**/*.zip"
         exclude: "**/archive.zip"
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
