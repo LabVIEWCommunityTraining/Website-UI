@@ -31,7 +31,5 @@ jobs:
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
       with:
-        name: en-ui
-        path: |
-          en/build/ui-bundle.zip
-          fr/build/ui-bundle.zip
+        name: ui-bundles
+        path: */build/ui-bundle.zip
