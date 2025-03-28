@@ -21,15 +21,15 @@ jobs:
     - name: Install Gulp locally to build the UI
       run: npm i gulp-cli ./en
     - name: Build UI
-      run: gulp bundle -f ./en/gulpfile.js
+      run: gulp bundle --out ./ui-bundles --name en-ui.zip -f ./en/gulpfile.js
 # build fr website
     - name: Install Gulp locally to build the UI
-      run: npm i gulp-cli ./en
+      run: npm i gulp-cli ./fr
     - name: Build UI
-      run: gulp bundle -f ./en/gulpfile.js
+      run: gulp bundle --out ./ui-bundles --name fr-ui.zip -f ./en/gulpfile.js
 # download UIs
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v4
       with:
         name: ui-bundles
-        path: */build/ui-bundle.zip
+        path: ui-bundles
