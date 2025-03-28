@@ -21,7 +21,7 @@ jobs:
     - name: Install Gulp locally to build the UI
       run: npm i gulp-cli ./en
     - name: Build en UI
-      run: gulp bundle -f /en/gulpfile.js
+      run: gulp bundle -f ./en/gulpfile.js
 # build fr website
     - name: Install Gulp locally to build the UI
       run: npm i gulp-cli ./fr
