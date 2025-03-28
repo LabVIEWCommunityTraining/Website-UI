@@ -17,13 +17,14 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-# install gulp
-    - name: Install Gulp locally to build the UI
-      run: npm i gulp-cli
 # build en website
+    - name: Install Gulp locally to build the UI
+      run: npm i gulp-cli ./en
     - name: Build en UI
       run: gulp bundle -f /en/gulpfile.js
 # build fr website
+    - name: Install Gulp locally to build the UI
+      run: npm i gulp-cli ./fr
     - name: Build fr UI
       run: gulp bundle -f ./fr/gulpfile.js
 # download UIs
