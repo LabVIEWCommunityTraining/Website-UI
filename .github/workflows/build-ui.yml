@@ -25,11 +25,15 @@ jobs:
       run: npm i gulp-cli ./en
     - name: Build en UI
       run: gulp bundle -f ./en/gulpfile.js
+    - name: Move built folder to public
+      run: mv en/build/* public/en
 # build fr website
     - name: Install Gulp locally to build the UI
       run: npm i gulp-cli ./fr
     - name: Build fr UI
       run: gulp bundle -f ./fr/gulpfile.js
+    - name: Move built folder to public
+      run: mv fr/build/* public/fr
 # download UIs
     - name: Upload GitHub Pages Artifact
       uses: actions/upload-pages-artifact@v3
