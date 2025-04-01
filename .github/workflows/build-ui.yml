@@ -25,20 +25,34 @@ jobs:
       run: npm i gulp-cli ./en
     - name: Build en UI
       run: gulp bundle -f ./en/gulpfile.js
-    - name: Move built folder to public
-      run: mv en/build/ui-bundle.zip public/en/
+    - name: Move built folder to _public
+      run: mv en/build/ui-bundle.zip _public/en/
 # build fr website
     - name: Install Gulp locally to build the UI
       run: npm i gulp-cli ./fr
     - name: Build fr UI
       run: gulp bundle -f ./fr/gulpfile.js
-    - name: Move built folder to public
-      run: mv fr/build/ui-bundle.zip public/fr/
+    - name: Move built folder to _public
+      run: mv fr/build/ui-bundle.zip _public/fr/
+# build es website
+    - name: Install Gulp locally to build the UI
+      run: npm i gulp-cli ./es
+    - name: Build es UI
+      run: gulp bundle -f ./es/gulpfile.js
+    - name: Move built folder to _public
+      run: mv es/build/ui-bundle.zip _public/es/
+# build zh website
+    - name: Install Gulp locally to build the UI
+      run: npm i gulp-cli ./zh
+    - name: Build zh UI
+      run: gulp bundle -f ./zh/gulpfile.js
+    - name: Move built folder to _public
+      run: mv zh/build/ui-bundle.zip _public/zh/
 # download UIs
     - name: Upload GitHub Pages Artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: public
+        path: _public
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
